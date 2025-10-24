@@ -1,0 +1,7 @@
+__pycache__/
+.env
+chroma_db/
+pdf_files/
+tables/
+status_file.json
+log_file.log
