@@ -23,6 +23,7 @@ To achieve this, the project uses:
 | **OpenAI** | Provides the large language models (LLMs) used for text generation. |
 | **LangChain** | Connects the model to external data and manages retrieval, logic, and prompt construction. |
 | **Streamlit** | Builds the web interface for displaying and interacting with the chatbot. |
+<img width="1359" height="289" alt="ecosystem" src="https://github.com/user-attachments/assets/c3fadddb-eef4-40cd-bff4-1f99a0daf3ec" />
 
 
 ### PDF Processing Pipeline
@@ -36,11 +37,15 @@ The core of the system is the **PDF processing workflow**, which transforms uplo
 | **Annotate** | (Optional) Could be used to label or categorize text segments for advanced processing. |
 | **Vectorize** | Converts text chunks into numerical embeddings and stores them in a vector database for similarity search. |
 
+![PDF processing](https://github.com/user-attachments/assets/bceb1e1c-033f-43ea-9b77-b15900d69993)
 
 ### How vector embedding works
 
+<img width="549" height="196" alt="embeddings" src="https://github.com/user-attachments/assets/16dac74f-4021-413d-a871-29f226b14227" />
 
 ### How RAG works
+
+<img width="1200" height="708" alt="RAG_case" src="https://github.com/user-attachments/assets/d790ff10-1046-4a4b-985c-36b4d989648e" />
 
 
 ### Additional Settings
@@ -60,8 +65,14 @@ The software follows an **object-oriented structure** with clearly separated com
 - **PokerTutor Chat class:** manages conversation flow, memory, and context retrieval.
 
 The design includes:
-- **Class Diagram:** visualizing the main class relationships.  
+- **Class Diagram:** visualizing the main class relationships.
+
+![UML class diagram](https://github.com/user-attachments/assets/af801e1b-dc31-4bd6-9127-1c7fa96b387f)
+
+
 - **Software Architecture Diagram:** showing the integration of Streamlit, LangChain, and the vector database.
+
+<img width="687" height="575" alt="architecture_diagram" src="https://github.com/user-attachments/assets/0c172f2a-396d-4f07-a932-1c2ac69ea9b6" />
 
 
 ## Project Structure
@@ -73,6 +84,7 @@ The design includes:
 - `chat_class.py` - PokerTutor chatbot logic (retrieval + generation)
 - `.env` - Environment variables
 - `requirements.txt` - Dependencies
+
 
 ## Local Installation and Setup
 
