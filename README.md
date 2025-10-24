@@ -95,25 +95,15 @@ cd poker-tutor-rag>
 ```
 
 ### 2. Create a Virtual Environment
-Option A: **Python Virtual Environment**
+**Python Virtual Environment**
 
-Create a virtual environment:
+```
+python -m venv poker_tutor
+poker_tutor\Scripts\activate
+pip install -r requirements.txt
+```
 
-`python -m venv poker_tutor`
-
-Activate the environment:
-
-Windows: `poker_tutor\Scripts\activate`
-
-Linux/MacOS: `source poker_tutor/bin/activate`
-
-Install the dependencies:
-
-`pip install -r requirements.txt`
-
-Option B: **Conda Virtual Environment**
-
-Create and activate the environment:
+**Conda Virtual Environment**
 
 ```
 conda create --name poker_tutor python=3.10
@@ -136,7 +126,9 @@ LOG_FILE = "log_file.log"
 ```
 
 ### Running the application
-`streamlit run app.py`
+```
+streamlit run app.py
+```
 
 ### Recommended settings
 - Use the left sidebar (open with the arrow) to select PDFs.
@@ -145,7 +137,8 @@ LOG_FILE = "log_file.log"
 
 ### Requirements
 
-```streamlit==1.42.0
+```
+streamlit==1.42.0
 langchain==0.3.17
 langchain-community==0.3.16
 langchain-core==0.3.34
@@ -160,4 +153,5 @@ pandas==2.2.3
 langchain-chroma==0.2.2
 pypdf==5.3.0
 pydantic==2.10.6
-tabulate==0.9.0```
+tabulate==0.9.0
+```
