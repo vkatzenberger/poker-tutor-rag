@@ -5,7 +5,6 @@ It processes poker books in PDF format, extracts and embeds their contents into 
 
 This software was developed as part of my Bachelor’s thesis.
 
----
 
 ## Project Overview
 
@@ -17,7 +16,6 @@ To achieve this, the project uses:
 - **LLM (Large Language Model):** a large-scale neural model responsible for generating human-like responses.  
 - **RAG (Retrieval-Augmented Generation):** a technique that enhances accuracy and reliability by grounding the model’s answers in the content of user-provided documents.
 
----
 
 ### Stack Used
 | Tool | Purpose |
@@ -26,7 +24,6 @@ To achieve this, the project uses:
 | **LangChain** | Connects the model to external data and manages retrieval, logic, and prompt construction. |
 | **Streamlit** | Builds the web interface for displaying and interacting with the chatbot. |
 
----
 
 ### PDF Processing Pipeline
 The core of the system is the **PDF processing workflow**, which transforms uploaded poker books into retrievable knowledge for the chatbot.
@@ -39,16 +36,12 @@ The core of the system is the **PDF processing workflow**, which transforms uplo
 | **Annotate** | (Optional) Could be used to label or categorize text segments for advanced processing. |
 | **Vectorize** | Converts text chunks into numerical embeddings and stores them in a vector database for similarity search. |
 
----
 
 ### How vector embedding works
 
----
 
 ### How RAG works
 
-
----
 
 ### Additional Settings
 The chatbot interface allows several adjustable options:
@@ -59,7 +52,6 @@ The chatbot interface allows several adjustable options:
 - **Style:** define the response style (Normal, Explain, Summarize, or Step-by-Step).  
 - **Focus:** emphasize a specific topic (Poker Basics, Expected Value, or Bluffing).
 
----
 
 ### Software Design
 The software follows an **object-oriented structure** with clearly separated components:
@@ -85,8 +77,10 @@ The design includes:
 ## Local Installation and Setup
 
 ### 1. Clone the Repository
-```git clone https://github.com/yourusername/poker-tutor-rag.git 
-cd poker-tutor-rag>```
+```
+git clone https://github.com/yourusername/poker-tutor-rag.git 
+cd poker-tutor-rag>
+```
 
 ### 2. Create a Virtual Environment
 Option A: **Python Virtual Environment**
@@ -109,21 +103,25 @@ Option B: **Conda Virtual Environment**
 
 Create and activate the environment:
 
-```conda create --name poker_tutor python=3.10
+```
+conda create --name poker_tutor python=3.10
 conda activate poker_tutor
-pip install -r requirements.txt```
+pip install -r requirements.txt
+```
 
 ### Environment Variables
 Create a .env file in the project root:
 
-```OPENAI_API_KEY="your_api_key"
+```
+OPENAI_API_KEY="your_api_key"
 OPENAI_MODEL="gpt-4o-mini"
 PDF_FOLDER="pdf_files"
 TABLE_FOLDER="tables"
 STATUS_FILE="status_file.json"
 EMBEDDING_MODEL="text-embedding-ada-002"
 DB_DIR = "./chroma_db"
-LOG_FILE = "log_file.log"```
+LOG_FILE = "log_file.log"
+```
 
 ### Running the application
 `streamlit run app.py`
